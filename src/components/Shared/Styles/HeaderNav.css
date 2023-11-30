@@ -1,0 +1,30 @@
+.headernav{
+    width: 100%;
+    height: 70px;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    position:fixed;
+    z-index: 1;
+    background: white;
+}
+
+.headernav__span{
+    color: red;
+    padding-left: 10px;
+}
+.bx{
+    color:rgba(0, 0, 0, 0.561);
+}
+.headernav__ul{
+    height: 70px;
+    display: flex;        
+}
+.headernav__li{
+    height: 70px;
+    border-left: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:25px ;
+}

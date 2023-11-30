@@ -1,0 +1,81 @@
+.Homepage{
+    width: 100%;
+    position: relative;
+}
+.Homepage__search{
+    width: 70%;
+    height: 40px;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    margin-left: 25%;
+}
+
+.product-container{
+margin-left: 25%;
+display: flex;
+justify-content: center;
+gap: 1.5em 2em;
+flex-wrap: wrap;
+}
+
+/* ***********CSS DE FILTROS*********** */
+.Homepage__filter{    
+    top: 130px;
+    margin-left: 30px;    
+    position: fixed;
+    
+}
+.Homepage__filterprice{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 150px;
+}
+.Homepage__title__price{
+    margin-bottom: 15px;
+}
+.Homepage__filterprice__span{
+    width: 80px;
+    margin-right: 30px;
+}
+.Homepage__span-to{
+    margin-right: 50px;
+}
+.Homepage__filterprice__input{
+width: 150px;
+}
+.Homepage__btn__filter{
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    margin: 5px 0 20px auto;
+    padding: 8px 15px;
+    background: #f85555;
+    border: none;
+}
+@media (max-width: 600px) {
+    
+}
+
+@media (max-width: 600px) {
+    .Homepage__filter{
+        display: none;  
+        
+    }
+    .Homepage__search{
+        width: 86%;
+        height: 40px;
+        margin-top: 90px;
+        margin-bottom: 50px;
+        margin-left: 7%;
+    }
+    
+    .product-container{
+    width: 86%;
+    margin-left: 7%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em 2em;
+    flex-wrap: wrap;
+    }
+}
