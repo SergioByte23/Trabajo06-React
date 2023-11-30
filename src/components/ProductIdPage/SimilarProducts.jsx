@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import useFetch from "../../hooks/useFetch"
 import ProductCard from "../HomePage/ProductCard"
+import './styles/SimilarProducts.css'
 
 const SimilarProducts = ({categoryId,idProd}) => {
     const[productsByCategory,getProductsByCategory]=useFetch()
@@ -13,8 +14,8 @@ const SimilarProducts = ({categoryId,idProd}) => {
   console.log(productsByCategory);
     return (
     <article>
-        <h2>Similar Products</h2>
-        <div className="">
+        <h2 className="similarproduct__subtitle">Similar Products</h2>
+        <div className="product-container product-container-similar ">
             {
                 productsByCategory?.filter(prod=>prod.id!==idProd).map(product=>(
                     <ProductCard 

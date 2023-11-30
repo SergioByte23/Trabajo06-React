@@ -10,6 +10,7 @@ import './Styles/HomePage.css'
 
 const HomePage = () => {
   const [nameValue, setNameValue] = useState('')
+  const [valueFilter, setValueFilter] = useState(true)
   const [categorySelected, setCategorySelected] = useState('all')
   const [priceRange, setPriceRange] = useState({
     from:0,
@@ -37,11 +38,22 @@ const HomePage = () => {
     const filterPrice=priceRange.from<=price && price<=priceRange.to;
     return filterName && FilterCategory &&filterPrice;
   }
+  const handleFilter = ()=>{
+    setValueFilter(!valueFilter)
+  }
   return (
     <div className="Homepage">
-      <input className="Homepage__search" ref={inputName} onChange={handleInputName} type="text" />
-      <div className="Homepage__filter">
+      <input className="Homepage__search" ref={inputName} onChange={handleInputName} type="text" placeholder="What are you looking for?" />
+      <span onClick={handleInputName}>
+        <i className='bx bx-search-alt-2 bx-sm search'>
+        </i>
+      </span>
+      <div className="Homepage__filter__btn"   onClick={handleFilter}>
+      <i class='bx bx-filter-alt'></i><span>filter</span>
+      </div>
+      <div className={`Homepage__filter ${valueFilter && 'form__disable'}`}>
         <h2 className="Homepage__title__price">Price</h2>
+        <hr className="Homepage__hr" />
         <FilterPrice setPriceRange={setPriceRange} />
         <FilterCategory setCategorySelected={setCategorySelected} />
       </div>

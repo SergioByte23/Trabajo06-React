@@ -4,22 +4,25 @@ import useFetch from "../hooks/useFetch"
 import { useEffect } from "react"
 import SimilarProducts from "../components/ProductIdPage/SimilarProducts"
 import SliderImg from "../components/ProductIdPage/SliderImg"
+import './Styles/ProductIdPage.css'
 
 const ProductIdPage = () => {
-  const {id}=useParams()
-  const[product,getProduct]=useFetch()
-  
+  const { id } = useParams()
+  const [product, getProduct] = useFetch()
 
-  useEffect(()=>{
+
+  useEffect(() => {
     const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`
     getProduct(url)
-  },[id])
+  }, [id])
   console.log(product);
   return (
     <div>
-      <SliderImg product={product}/>
-     <ProductInfo product={product} />
-     <SimilarProducts categoryId={product?.category.id} idProd={product?.id} />
+      <div className="productidpage__box">
+      <SliderImg product={product} />      
+      <ProductInfo product={product} />
+      </div>
+      <SimilarProducts categoryId={product?.category.id} idProd={product?.id} />
     </div>
   )
 }

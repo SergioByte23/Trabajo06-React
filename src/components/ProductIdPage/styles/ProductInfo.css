@@ -1,0 +1,34 @@
+.ProductInfo{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+}
+
+.ProductInfo__quantity__count{
+    display: flex;
+    
+}
+.ProductInfo>button{
+    grid-column: 1/3;
+    height: 60px;
+
+    background: #f85555;;
+    color: #fff;
+    font-size: 1.1rem;    
+    padding: 10px;
+    border: none;
+
+
+}
+.ProductInfo__quantity__subtitle{
+font-weight: 400;
+font-size: 1.1rem;
+}  
+.ProductInfo__quantity__number{
+    width: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.498);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.498);
+    text-align: center;
+}

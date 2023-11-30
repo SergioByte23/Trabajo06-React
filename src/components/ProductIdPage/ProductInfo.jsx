@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { addProductTocartThunk } from "../../store/Slices/cart.slice"
 import { useDispatch } from "react-redux"
+import './styles/ProductInfo.css'
 
 
 const ProductInfo = ({product}) => {
@@ -20,21 +21,25 @@ const ProductInfo = ({product}) => {
   }
   return (
       <article>
-        <img src={product?.images[0].url}alt="" />
+        {/* <img src={product?.images[0].url}alt="" /> */}
         <h1>{product?.brand}</h1>
         <h2>{product?.title}</h2>
         <p>{product?.description}</p>
-        <footer>
-          <div>
-            <span>Price</span>
-            <span>{product?.price}</span>
+        <footer className="ProductInfo">
+          <div className="ProductInfo__price">
+            <span className="ProductInfo__quantity__subtitle">Price</span>
+            <h3>{product?.price}</h3>
           </div>
-          <div>
+          <div className="ProductInfo__quantity">
+            <h3 className="ProductInfo__quantity__subtitle" >Quantity</h3>
+            <div className="ProductInfo__quantity__count">
             <button onClick={handleMinus}>-</button>
-            <div>{quantity}</div>
+            <div className="ProductInfo__quantity__number">{quantity}</div>
             <button onClick={handlePlus}>+</button>
-          </div>
-          <button onClick={handleAddTocart}>Add to cart</button>
+            </div>
+          </div>          
+          <button className="ProductInfo__addCart" onClick={handleAddTocart}>Add to cart</button>
+        
         </footer>
       </article>
   )

@@ -6,15 +6,16 @@
     align-items: center;
     border-bottom: 1px solid black;
     position:fixed;
-    z-index: 1;
+    z-index: 2;
     background: white;
+    top: 0;
 }
 
 .headernav__span{
     color: red;
     padding-left: 10px;
 }
-.bx{
+.bx-user-plus, .bxs-user, .bxs-cart-add, .bx-store{
     color:rgba(0, 0, 0, 0.561);
 }
 .headernav__ul{
@@ -27,4 +28,16 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-top:25px ;
+}
+@media (max-width:508px){
+    .headernav__span{        
+       
+        font-size: 1.7rem;
+    }
+}
+@media (max-width:400px){
+    .headernav__span{        
+        
+        font-size: 1rem;
+    }
 }

@@ -1,0 +1,22 @@
+.product-container-similar{
+    margin-left: 5%;
+    display: flex;
+    justify-content:start;
+    gap: 1.5em 2em;
+    flex-wrap: wrap;
+}
+.similarproduct__subtitle{
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
+@media (max-width: 780px) {
+    .product-container-similar{
+        justify-content: center;
+    }
+
+}
+/* @media (max-width: 960px) {
+    .product-container {
+        width: 86%;
+        margin-left: 7%;
+    } */
