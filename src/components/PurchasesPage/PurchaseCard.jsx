@@ -1,13 +1,13 @@
 
 const PurchaseCard = ({purchase}) => {
   return (
-    <article>
-        <header>
-            <img src={purchase.product.images[0].url} alt="" />
+    <article className="purchase__article">
+        <header className="purchase__header">
+            <img className="purchase__img" src={purchase.product.images[0].url} alt="" />
         </header>
-        <h3>{purchase.product.title}</h3>
-        <span>{purchase.quantity}</span>
-        <div>{purchase.product.price}</div>
+        <h3 className="purchase__subtitle">{purchase.product.title}</h3>
+        <span className="purchase__quantity">{purchase.quantity}</span>
+        <div className="purchase__price">{purchase.product.price}</div>
     </article>
   )
 }

@@ -1,9 +1,12 @@
 .product-container-similar{
     margin-left: 5%;
+    width: 80%;
+    
     display: flex;
-    justify-content:start;
+    justify-content:space-between;
     gap: 1.5em 2em;
     flex-wrap: wrap;
+    
 }
 .similarproduct__subtitle{
     margin-left: 5%;
