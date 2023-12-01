@@ -5,6 +5,7 @@ import ProductCard from "../components/HomePage/ProductCard";
 import FilterCategory from "../components/HomePage/FilterCategory";
 import FilterPrice from "../components/HomePage/FilterPrice";
 import './Styles/HomePage.css'
+import CartPage from "./CartPage";
 
 
 
@@ -42,6 +43,8 @@ const HomePage = () => {
     setValueFilter(!valueFilter)
   }
   return (
+    <>
+    
     <div className="Homepage">
       <input className="Homepage__search" ref={inputName} onChange={handleInputName} type="text" placeholder="What are you looking for?" />
       <span onClick={handleInputName}>
@@ -57,6 +60,7 @@ const HomePage = () => {
         <FilterPrice setPriceRange={setPriceRange} />
         <FilterCategory setCategorySelected={setCategorySelected} />
       </div>
+      
       <div className="product-container">
         {
           // para que sirven los parentesis en est caso es que es un return implicito
@@ -71,6 +75,7 @@ const HomePage = () => {
         }
       </div>
     </div>
+    </>
   )
 }
 

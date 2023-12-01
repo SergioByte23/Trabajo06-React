@@ -1,0 +1,30 @@
+.cart{
+    position: absolute;
+    width: 600px;        
+    margin-top: 70px;
+    padding: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    /* border: 1px solid rgba(0, 0, 0, 0.324); */
+    
+    background: white;
+}
+.cart__div{
+    width: 60%;
+    margin-left: 20%;
+}
+.cartproduct{
+    width: 90%;
+    height: 400px;
+    
+}
+.cartproduct__header{
+    width: 100%;
+    height: 60%;
+}
+.cartproduct__img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}

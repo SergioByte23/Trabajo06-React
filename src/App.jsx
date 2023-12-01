@@ -25,7 +25,6 @@ function App() {
           <Route element={<ProtectedRoutes/>}>
             <Route path='/cart' element={<CartPage />} />
             <Route path='/purchases' element={<PurchasesPage />} />
-
           </Route>
         </Routes>
       </div>
