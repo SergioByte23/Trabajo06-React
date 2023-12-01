@@ -1,0 +1,17 @@
+.register{
+    width: 500px;
+    margin: 150px auto ;    
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    background: rgba(241,241,239,255);
+    border-radius: 15px;
+}
+.register__span{
+    display: block;
+    width: 100px;
+}
+.register__btn{
+    margin-bottom: 30px;
+}

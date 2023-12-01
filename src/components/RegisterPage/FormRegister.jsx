@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 import useAuth from "../../hooks/useAuth"
+import './Styles/FormRegister.css'
 
 const FormRegister = () => {
     const { register, handleSubmit, reset } = useForm()
@@ -11,28 +12,28 @@ const FormRegister = () => {
 
 
     return (
-        <form onSubmit={handleSubmit(submit)}>
-            <label>
-                <span>First name</span>
-                <input {...register('firstName')} type="text" />
+        <form className="register" onSubmit={handleSubmit(submit)}>
+            <label className="register__label">
+                <span className="register__span">First name</span>
+                <input className="register__input" {...register('firstName')} type="text" />
             </label>
-            <label>
-                <span>Last name</span>
-                <input {...register('lastName')} type="text" />
+            <label className="register__label">
+                <span className="register__span">Last name</span>
+                <input className="register__input" {...register('lastName')} type="text" />
             </label>
-            <label>
-                <span>Email</span>
-                <input {...register('email')} type="email" />
+            <label className="register__label">
+                <span className="register__span">Email</span>
+                <input className="register__input" {...register('email')} type="email" />
             </label>
-            <label>
-                <span>Password</span>
-                <input {...register('password')} type="password" />
+            <label className="register__label">
+                <span className="register__span">Password</span>
+                <input className="register__input" {...register('password')} type="password" />
             </label>
-            <label>
-                <span>Phone</span>
-                <input {...register('phone')} type="text" />
+            <label className="register__label">
+                <span className="register__span">Phone</span>
+                <input className="register__input" {...register('phone')} type="text" />
             </label>
-            <button>Register</button>
+            <button className="register__btn">Register</button>
 
         </form>
     )

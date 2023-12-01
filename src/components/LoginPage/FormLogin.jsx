@@ -8,13 +8,13 @@ const FormLogin = () => {
     loginUser(data);
     }
     return (
-        <form onSubmit={handleSubmit(submit)}>
-            <label>
-                <span>Email</span>
+        <form className="register" onSubmit={handleSubmit(submit)}>
+            <label className="register__label">
+                <span className="register__span">Email</span>
                 <input {...register('email')} type="email" />
             </label>
-            <label>
-                <span>Password</span>
+            <label className="register__label">
+                <span className="register__span">Password</span>
                 <input {...register('password')} type="password" />
             </label>
             <button>Login</button>
